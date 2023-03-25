@@ -9,26 +9,22 @@
 
     <button id="getFortuneButton">Get Random Fortune</button>
 
-    
-    <h3>Fortunes</h3>
-    <div id="listOfFortunes">
-      <p>'Love lights up the world.'</p>
-      <p>'New ideas could be profitable.'</p>
-      <p>'Now is a good time to buy stock.'</p>
-    </div>
+    <button id="getAllFortune">Get All Fortunes</button>
 
-
-    <h3>Post Fortune</h3>
-    <input type="text" id="newFortune">
+    <h3>Add Fortune</h3>
+    <input type="text" id="newFortune" placeholder="Enter Fortune to Here">
     <button id="addButton">Add Fortune!</button>
-    <ul id="list"></ul>
-
 
     <h3>Delete Fortune</h3>
-    <input type="text" id="deleteFortune">
-    <button id="deleteButton">Delete Fortune!</button>
+    <input type="text" id="fortuneId" placeholder="Enter Number to Delete">
+    <button id="deleteButton">Delete Fortune</button>
 
+    <!-- <h3>Put Fortune</h3>
+    <input type="text" id="fortunePut" placeholder="Enter Number to Put">
+    <button id="putButton">Put Fortune</button> -->
 
+    <h3>My Fortunes</h3>
+    <div id="fortuneDisplay"></div>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>

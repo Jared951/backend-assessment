@@ -1,7 +1,9 @@
-let fortuneArray = ['Love lights up the world.', 'New ideas could be profitable.', 'Now is a good time to buy stock.']
+// let fortuneArray = ['Love lights up the world.', 'Love truth, but pardon error.', 'Miles are covered one step at a time.']
+let fortuneArray = ["Believe it can be done.", "Courtesy is contagious.", "The night life is for you."];
 
 module.exports = {
 
+    
     getCompliment: (req, res) => {
         const compliments = ["Gee, you're a smart cookie!", "Cool shirt!", "Your Javascript skills are stellar."];
       
@@ -22,15 +24,31 @@ module.exports = {
         res.status(200).send(randomFortune);
     },
 
-    addFortune: (req, res) => {
-        let {name} = req.body
-        fortuneArray.push(name)
-        console.log(name)
+    //get fortune
+    getAllOfTheFortunes: (req, res) => {
         res.status(200).send(fortuneArray)
     },
 
-    
+    //post fortune
+    addFortune: (req, res) => {
+        let {name} = req.body
+        console.log(name)
+        fortuneArray.push(name)
+        res.status(200).send(fortuneArray)
+    },
 
+    //delete fortune
+    deleteFortune: (req, res) => {
+        let index = req.params.id - 1
+        fortuneArray.splice(index, 1)
+        res.status(200).send(fortuneArray)
+    },
+
+    //put fortune
+    // putFortune: (req, res) => {
+    //     let index = req.params.id - 1
+    //     fortuneArray.push(index, 1)
+    //     res.status(200).send(fortuneArray)
+    // }
 }
 
-console.log(fortuneArray)
